@@ -9,7 +9,7 @@ class Sighter(object):
     def markdown_html_driver(self):
             markdown_output = Post().read_markdown_file('../tests/2022-01-01-test_post.md')
             html_output = Post().markdown_to_html(markdown_output)
-            print(html_output)    
+            Post().create_post(html_output, '../themes/post.html', '../output/blog/new_post.html')
 
     # Create post with template and add html
 
